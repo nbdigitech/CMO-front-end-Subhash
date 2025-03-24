@@ -230,7 +230,7 @@ export default function AuthPage() {
             </div>
           )}
         </div>
-        <p className="text-center text-black ml-[-10px] mt-6">Initiative By DPR Chhattisgarh</p>
+        <p className="text-center text-black ml-[-10px] mt-6">Initiative By DPR Chhattisgarh CMO testing  1 Subhash</p>
       </div>
 
       <div className="hidden md:flex md:w-2/3 relative overflow-hidden items-center">

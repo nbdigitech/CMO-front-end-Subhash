@@ -19,7 +19,7 @@ const ModalPopup = ({ isOpen, setIsOpen, fetchAlbums }) => {
   useEffect(() => {
     const fetchDistricts = async () => {
       try {
-        const response = await fetch("https://api.cmophotos.in//districts");
+        const response = await fetch("https://api.cmophotos.in/districts");
         if (response.ok) {
           const data = await response.json();
           setDistricts(data); // Update state with fetched districts
@@ -40,7 +40,7 @@ const ModalPopup = ({ isOpen, setIsOpen, fetchAlbums }) => {
   useEffect(() => {
     const fetchDepartments = async () => {
       try {
-        const response = await fetch("https://api.cmophotos.in//departments");
+        const response = await fetch("https://api.cmophotos.in/departments");
         if (response.ok) {
           const data = await response.json();
           setDepartments(data); // Update state with fetched departments
@@ -87,7 +87,7 @@ const ModalPopup = ({ isOpen, setIsOpen, fetchAlbums }) => {
         cover: base64Cover,
       };
 
-      const response = await fetch("https://api.cmophotos.in//create-album", {
+      const response = await fetch("https://api.cmophotos.in/create-album", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newAlbum),

@@ -61,7 +61,7 @@ export default function AuthPage() {
     }
   
     try {
-      const response = await fetch("https://api.cmophotos.in//login", {
+      const response = await fetch("https://api.cmophotos.in/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -202,7 +202,7 @@ export default function AuthPage() {
       )}
 
             <div>
-              <h2 className="text-2xl font-bold text-center text-[#170645]">AI Based CMO Gallery</h2>
+              <h2 className="text-2xl font-bold text-center text-[#170645]">AI Based CMO 1 Gallery</h2>
               <p className="text-center text-[#170645] mt-2">Admin Login</p>
               <input
                 type="text"
