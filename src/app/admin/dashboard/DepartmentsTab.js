@@ -9,7 +9,7 @@ export default function DepartmentsTab() {
   const [editedName, setEditedName] = useState(""); // Store the edited name
 
   useEffect(() => {
-    fetch("https://api.cmophotos.in/departments")
+    fetch("https://https://api.homecomputer.online//departments")
       .then((res) => res.json())
       .then((data) => setDepartments(data));
   }, []);
@@ -17,7 +17,7 @@ export default function DepartmentsTab() {
   // Function to handle adding a department
   const handleAddDepartment = () => {
     if (departmentName.trim() !== "") {
-      fetch("https://api.cmophotos.in/departments", {
+      fetch("https://https://api.homecomputer.online//departments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: departmentName })
@@ -36,7 +36,7 @@ export default function DepartmentsTab() {
   // Function to save the edited department name
   const handleSaveEdit = (index) => {
     if (editedName.trim() !== "") {
-      fetch(`https://api.cmophotos.in/departments/${departments[index].name}`, {
+      fetch(`https://https://api.homecomputer.online//departments/${departments[index].name}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: editedName })
@@ -50,7 +50,7 @@ export default function DepartmentsTab() {
   };
 
   const handleDelete = (name) => {
-    fetch(`https://api.cmophotos.in/${name}`, { method: "DELETE" })
+    fetch(`https://https://api.homecomputer.online//${name}`, { method: "DELETE" })
       .then(() => setDepartments(departments.filter(d => d.name !== name)));
   };
 
