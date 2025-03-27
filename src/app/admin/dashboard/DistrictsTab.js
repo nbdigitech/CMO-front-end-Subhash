@@ -12,7 +12,7 @@ export default function DistrictsTab() {
   // Function to handle adding a district
 
   useEffect(() => {
-    fetch("https://https://api.homecomputer.online//districts")
+    fetch("https://api.homecomputer.online//districts")
       .then((res) => res.json())
       .then((data) => setDistricts(data));
   }, []);
@@ -20,7 +20,7 @@ export default function DistrictsTab() {
   // Function to enable editing mode
   const handleAddDistrict = () => {
     if (districtName.trim() !== "") {
-      fetch("https://https://api.homecomputer.online//districts", {
+      fetch("https://api.homecomputer.online//districts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: districtName })
@@ -40,7 +40,7 @@ export default function DistrictsTab() {
   };
   const handleSaveEdit = (index) => {
     if (editedName.trim() !== "" && index >= 0 && index < districts.length) {
-      fetch(`https://https://api.homecomputer.online//districts/${districts[index].name}`, {
+      fetch(`https://api.homecomputer.online//districts/${districts[index].name}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: editedName }),
@@ -59,7 +59,7 @@ export default function DistrictsTab() {
   };
 
   const handleDelete = (name) => {
-    fetch(`https://https://api.homecomputer.online//districts/${name}`, { method: "DELETE" })
+    fetch(`https://api.homecomputer.online//districts/${name}`, { method: "DELETE" })
       .then(() => setDistricts(districts.filter(d => d.name !== name)));
   };
 
